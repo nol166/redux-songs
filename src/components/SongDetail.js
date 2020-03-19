@@ -1,8 +1,20 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-function SongDetail() {
-    return <div>SongDetail</div>
+function SongDetail({ song }) {
+    if (song.name === 'selectSong') {
+        return <div>Select a song</div>
+    }
+    return (
+        <div>
+            <h3>Details for:</h3>
+            <p>
+                Title: {song.title}
+                <br />
+                Duration: {song.duration}
+            </p>
+        </div>
+    )
 }
 
 const mapStateToProps = state => {
