@@ -1,4 +1,3 @@
-// TODO: look at redux docs on imports
 import { combineReducers } from 'redux'
 import { selectSong } from '../actions'
 
